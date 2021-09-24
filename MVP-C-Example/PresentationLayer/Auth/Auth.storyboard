@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="TOr-Ek-sMA">
+            <objects>
+                <viewController storyboardIdentifier="LoginViewController" id="W78-zF-2hV" customClass="LoginViewController" customModule="MVP_C_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dZa-Ds-pmf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a5B-zb-5NM" customClass="RoundLayerView" customModule="MVP_C_Example" customModuleProvider="target">
+                                <rect key="frame" x="20" y="488" width="280" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lje-Bx-jhd">
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="50"/>
+                                        <color key="backgroundColor" name="primary"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <state key="normal" title="Войти">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="enterButtonTapped:" destination="W78-zF-2hV" eventType="touchUpInside" id="Mgh-1P-bsc"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="lje-Bx-jhd" firstAttribute="top" secondItem="a5B-zb-5NM" secondAttribute="top" id="4gd-64-b9O"/>
+                                    <constraint firstItem="lje-Bx-jhd" firstAttribute="leading" secondItem="a5B-zb-5NM" secondAttribute="leading" id="89X-ul-Csg"/>
+                                    <constraint firstAttribute="bottom" secondItem="lje-Bx-jhd" secondAttribute="bottom" id="ero-6W-Bd3"/>
+                                    <constraint firstAttribute="trailing" secondItem="lje-Bx-jhd" secondAttribute="trailing" id="qtT-5N-h0j"/>
+                                    <constraint firstAttribute="height" constant="50" id="vyb-h6-kX0"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="9"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="jYT-Po-Uh6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="a5B-zb-5NM" firstAttribute="leading" secondItem="jYT-Po-Uh6" secondAttribute="leading" constant="20" id="Bs0-JZ-3Gr"/>
+                            <constraint firstAttribute="trailing" secondItem="a5B-zb-5NM" secondAttribute="trailing" constant="20" id="LkX-P3-Nkf"/>
+                            <constraint firstItem="jYT-Po-Uh6" firstAttribute="bottom" secondItem="a5B-zb-5NM" secondAttribute="bottom" constant="30" id="TUS-fP-RhX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="entranceButton" destination="lje-Bx-jhd" id="tb8-oa-hmZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gs5-85-ulm" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="260" y="59"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="primary">
+            <color red="0.23137254901960785" green="0.82352941176470584" blue="0.71764705882352942" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

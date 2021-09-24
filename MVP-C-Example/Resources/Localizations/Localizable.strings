@@ -1,0 +1,13 @@
+/* 
+  Localisable.strings
+  PharmacyPortal
+
+  Created by vlad.kosyi on 22.10.2020.
+  Copyright © 2020 com.chisw. All rights reserved.
+*/
+
+// Example: ViewController_name.element_name.text_type_name (title, subtitle)
+
+"LoginViewController.entranceButton.title" = "Вход";
+
+
