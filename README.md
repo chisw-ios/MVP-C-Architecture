@@ -33,14 +33,14 @@ In order to collect the main coordinators for entry points, it must be described
 ![Main Coordinator](/Assets/coordinatorMain.jpg)
 
 To make creating MVPC modules convenient, there is an Xcode_Template_MVPC template in the root directory. You can add it and use it. Next, we'll discuss PresentationLayer. Let's analyze the module by taking the Auth module as an example:
-	*	Auth.storyboard - it is recommended to use no more than 5 screens in one file. If more screens needed, we create new storyboards with relational links in order to avoid conflicts when merging branches. Rule of thumb: One person - one flow - one storyboard.
-	*	AuthViewControllerFactory - an assembler, builder or factory that is responsible for assembling modules (controllers with presents)
-	*	AuthCoordinator - responsible for routing between all screens of the module by means of transferring events from the controller to the presenter, and then to the coordinator. The idea is based on blocks, the description of the work is just below in the presenter.
-	*	Login submodule:
-	   *	LoginViewController – is responsible for working with the screen (UI, ViewLifeCycle)
-	   *	LoginPresenter - processing business logic from services, preparing data for display
-	       *	Access to each presentation goes through the LoginPresenterProtocol protocol which describes all actions that the controller can perform with the presentation
-	       *	Each presenter describes the routes that the LoginPresenterRoutes module can walk. This is a structure with blocks which we initialize in the coordinator and perform routing there.
+	* Auth.storyboard - it is recommended to use no more than 5 screens in one file. If more screens needed, we create new storyboards with relational links in order to avoid conflicts when merging branches. Rule of thumb: One person - one flow - one storyboard.
+	* AuthViewControllerFactory - an assembler, builder or factory that is responsible for assembling modules (controllers with presents)
+	* AuthCoordinator - responsible for routing between all screens of the module by means of transferring events from the controller to the presenter, and then to the coordinator. The idea is based on blocks, the description of the work is just below in the presenter.
+	* Login submodule:
+	   * LoginViewController – is responsible for working with the screen (UI, ViewLifeCycle)
+	   * LoginPresenter - processing business logic from services, preparing data for display
+	       	* Access to each presentation goes through the LoginPresenterProtocol protocol which describes all actions that the controller can perform with the presentation
+	  	* Each presenter describes the routes that the LoginPresenterRoutes module can walk. This is a structure with blocks which we initialize in the coordinator and perform routing there.
           
 You can see a diagram of how screens can be linked to coordinators.
 
