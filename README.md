@@ -33,14 +33,14 @@ In order to collect the main coordinators for entry points, it must be described
 ![Main Coordinator](/Assets/coordinatorMain.jpg)
 
 To make creating MVPC modules convenient, there is an Xcode_Template_MVPC template in the root directory. You can add it and use it. Next, we'll discuss PresentationLayer. Let's analyze the module by taking the Auth module as an example:
-	* Auth.storyboard - it is recommended to use no more than 5 screens in one file. If more screens needed, we create new storyboards with relational links in order to avoid conflicts when merging branches. Rule of thumb: One person - one flow - one storyboard.
-	* AuthViewControllerFactory - an assembler, builder or factory that is responsible for assembling modules (controllers with presents)
-	* AuthCoordinator - responsible for routing between all screens of the module by means of transferring events from the controller to the presenter, and then to the coordinator. The idea is based on blocks, the description of the work is just below in the presenter.
-	* Login submodule:
-	   * LoginViewController – is responsible for working with the screen (UI, ViewLifeCycle)
-	   * LoginPresenter - processing business logic from services, preparing data for display
-	       	* Access to each presentation goes through the LoginPresenterProtocol protocol which describes all actions that the controller can perform with the presentation
-	  	* Each presenter describes the routes that the LoginPresenterRoutes module can walk. This is a structure with blocks which we initialize in the coordinator and perform routing there.
+* Auth.storyboard - it is recommended to use no more than 5 screens in one file. If more screens needed, we create new storyboards with relational links in order to avoid conflicts when merging branches. Rule of thumb: One person - one flow - one storyboard.
+* AuthViewControllerFactory - an assembler, builder or factory that is responsible for assembling modules (controllers with presents)
+* AuthCoordinator - responsible for routing between all screens of the module by means of transferring events from the controller to the presenter, and then to the coordinator. The idea is based on blocks, the description of the work is just below in the presenter.
+* Login submodule:
+	* LoginViewController – is responsible for working with the screen (UI, ViewLifeCycle)
+ 	* LoginPresenter - processing business logic from services, preparing data for display
+		* Access to each presentation goes through the LoginPresenterProtocol protocol which describes all actions that the controller can perform with the presentation
+		* Each presenter describes the routes that the LoginPresenterRoutes module can walk. This is a structure with blocks which we initialize in the coordinator and perform routing there.
           
 You can see a diagram of how screens can be linked to coordinators.
 
@@ -48,21 +48,21 @@ You can see a diagram of how screens can be linked to coordinators.
 
 Cocoapods is used as a dependency manager. Alternatively, you can use an alternative to SPM. Unfortunately, some dependencies still don't support SPM.
 I would like to dwell separately on the Networking directory. We use Alamofire as a basis.
-	*	EndPointType - constructor protocol for queries
-	*	Networker - class describing basic queries (MultipartData, RequestInterceptor, parsers)
-	*	Requester - directory with request factories for each flow.
+* EndPointType - constructor protocol for queries
+* Networker - class describing basic queries (MultipartData, RequestInterceptor, parsers)
+* Requester - directory with request factories for each flow.
 Divided into separate factories to avoid massive structures.
-	   *	AuthRequester - factory of requests for registration, authorization, forgot password, etc.
-	   *	It should be done with each flow separately. 
-	*	TokenStorage - service for storing tokens and secure information (KeychainSwift) Models for networking are parsed using Codable and are located in the BusinessLogicLayer / Models directory
+	* AuthRequester - factory of requests for registration, authorization, forgot password, etc.
+	* It should be done with each flow separately. 
+* TokenStorage - service for storing tokens and secure information (KeychainSwift) Models for networking are parsed using Codable and are located in the BusinessLogicLayer / Models directory
 
 The project has three schemes configured for building applications with different keys and input data. Why do you need it? For example, different backups, bundles, application names, as well as various keys and tokens for different services can be used for different environments. All this can be configured through configuration files in the CoreLayer / Configurations directory.
 
 ![Schemes](/Assets/schemes.png)
 
 To summarize, the basic rules for scaling the architecture should be highlighted.
-	*	We try to follow the SOLID principles.
-	*	Each service should have its own area of responsibility: for example, the Auth service will be responsible for working specifically with authorization, registration, etc. User service will be responsible specifically for working with user data, no matter if it's networking or a database.
-	*	Each coordinator works only with his own flow, the file size does not exceed 500 lines. Otherwise, we create a SubCoorinator according to the principle of the main coordinator's work with its subcoordinators.
-	*	Following the decomposition, we try not to overload services, presenters and controllers. Where can we break it down into separate entities and services.
-	*	For the privacy of individual classes, we work through protocols.
+* We try to follow the SOLID principles.
+* Each service should have its own area of responsibility: for example, the Auth service will be responsible for working specifically with authorization, registration, etc. User service will be responsible specifically for working with user data, no matter if it's networking or a database.
+* Each coordinator works only with his own flow, the file size does not exceed 500 lines. Otherwise, we create a SubCoorinator according to the principle of the main coordinator's work with its subcoordinators.
+* Following the decomposition, we try not to overload services, presenters and controllers. Where can we break it down into separate entities and services.
+* For the privacy of individual classes, we work through protocols.
