@@ -1,6 +1,6 @@
-name: NewProject
+name: $PROJECT_NAME$
 options:
-  bundleIdPrefix: com.NewProject
+  bundleIdPrefix: com.$PROJECT_NAME$
   xcodeVersion: 12.0.1
   deploymentTarget: '12.0'
   groupSortPosition: top
@@ -34,7 +34,7 @@ settings:
       SWIFT_OPTIMIZATION_LEVEL: -O
       VALIDATE_PRODUCT: false
 targets:
-  NewProject:
+  $PROJECT_NAME$:
     type: application
     platform: iOS
     deploymentTarget: 12.0
@@ -42,8 +42,8 @@ targets:
       base:
         MARKETING_VERSION: 1.0
     sources:
-    - path: /Users/hetmanx/XcodeGenDemo/Source
-      name: NewProject
+    - path: $PROJECT_PATH$/Source
+      name: $PROJECT_NAME$
     postCompileScripts:
     - script: "if which swiftlint >/dev/null; then\n   swiftlint\nelse\n   echo \"\
         warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\
