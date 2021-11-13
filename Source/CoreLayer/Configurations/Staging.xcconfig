@@ -1,0 +1,10 @@
+//
+//  Staging.xcconfig
+//
+// Server URL
+API_URL = https:/$()/api.url/ // set your api url
+API_VERSION = /api/v1/
+
+// App Settings
+APP_NAME = app-name-stage
+APP_BUNDLE_ID = com.chisw.testApp// set your bundle name

@@ -1,0 +1,51 @@
+name: NewProject
+options:
+  bundleIdPrefix: com.NewProject
+  xcodeVersion: 12.0.1
+  deploymentTarget: '12.0'
+  groupSortPosition: top
+  generateEmptyDirectories: true
+  findCarthageFrameworks: false
+  minimumXcodeGenVersion: 2.18.0
+configs:
+  Debug (Development): debug
+  Debug (Staging): release
+  Release (Production): release
+settings:
+  base:
+    IPHONEOS_DEPLOYMENT_TARGET: 12.0
+    ENABLE_BITCODE: false
+    SWIFT_VERSION: 5.2
+  configs:
+    Debug (Development):
+      ENABLE_TESTABILITY: true
+      SWIFT_COMPILATION_MODE: singlefile
+      SWIFT_OPTIMIZATION_LEVEL: -Onone
+      VALIDATE_PRODUCT: false
+    Release (Production):
+      ENABLE_TESTABILITY: false
+      SWIFT_COMPILATION_MODE: wholemodule
+      SWIFT_OPTIMIZATION_LEVEL: -O
+      VALIDATE_PRODUCT: true
+    Debug (Staging):
+      ENABLE_TESTABILITY: false
+      SWIFT_ACTIVE_COMPILATION_CONDITIONS: STAGING
+      SWIFT_COMPILATION_MODE: wholemodule
+      SWIFT_OPTIMIZATION_LEVEL: -O
+      VALIDATE_PRODUCT: false
+targets:
+  NewProject:
+    type: application
+    platform: iOS
+    deploymentTarget: 12.0
+    settings:
+      base:
+        MARKETING_VERSION: 1.0
+    sources:
+    - path: /Users/hetmanx/XcodeGenDemo/Source
+      name: NewProject
+    postCompileScripts:
+    - script: "if which swiftlint >/dev/null; then\n   swiftlint\nelse\n   echo \"\
+        warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\
+        \nfi\n"
+      name: Run SwiftLint
