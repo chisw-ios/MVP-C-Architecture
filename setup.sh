@@ -12,7 +12,10 @@ sed -i -e 's#\$PROJECT_PATH\$#'$project_dir/$project_name'#g' $project_name/proj
 sed -i -e 's#\$PROJECT_NAME\$#'$project_name'#g' $project_name/Podfile
 
 rm $project_name/project.yml-e
-
+rm $project_name/.git
 cd ./$project_name
+
 xcodegen generate
+
+pod install
 
