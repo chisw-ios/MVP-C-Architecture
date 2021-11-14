@@ -2,7 +2,7 @@ name: $PROJECT_NAME$
 options:
   bundleIdPrefix: com.$PROJECT_NAME$
   xcodeVersion: 12.0.1
-  deploymentTarget: '12.0'
+  deploymentTarget: '13.0'
   groupSortPosition: top
   generateEmptyDirectories: true
   findCarthageFrameworks: false
@@ -13,7 +13,7 @@ configs:
   Release (Production): release
 settings:
   base:
-    IPHONEOS_DEPLOYMENT_TARGET: 12.0
+    IPHONEOS_DEPLOYMENT_TARGET: 13.0
     ENABLE_BITCODE: false
     SWIFT_VERSION: 5.2
   configs:
@@ -37,7 +37,7 @@ targets:
   $PROJECT_NAME$:
     type: application
     platform: iOS
-    deploymentTarget: 12.0
+    deploymentTarget: 13.0
     settings:
       base:
         MARKETING_VERSION: 1.0
