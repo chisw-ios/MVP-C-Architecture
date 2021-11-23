@@ -71,8 +71,6 @@ To summarize, the basic rules for scaling the architecture should be highlighted
 ## Installation
 * You do not have to clone the current repository just follow step-by-step the instruction: 
 1. brew install xcodegen
-2. Create new folder in your repository, where new project will be created
-3. Enter new Folder 
-4. Inside new Folder open terminal and run the comand: bash <(curl -s https://raw.githubusercontent.com/hetmanskiy/MVP-Coordinator/feature/Xcodegen/setup.sh)
-5. In the your new 
+2. Open terminal inside the folder where you want to start new project('Directory with project name will be created automaticly)
+3. run the comand: ```bash <(curl -s https://raw.githubusercontent.com/hetmanskiy/MVP-Coordinator/feature/Xcodegen/setup.sh)```
 
