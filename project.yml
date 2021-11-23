@@ -117,5 +117,5 @@ schemes:
       
 configFiles:
     Debug (Development): $PROJECT_PATH$/Source/CoreLayer/Configurations/Development.xcconfig
-    Debug (Staging): $PROJECT_PATH$/Source/Source/CoreLayer/Configurations/Staging.xcconfig
+    Debug (Staging): $PROJECT_PATH$/Source/CoreLayer/Configurations/Staging.xcconfig
     Release (Production): $PROJECT_PATH$/Source/CoreLayer/Configurations/Production.xcconfig
