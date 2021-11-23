@@ -7,6 +7,7 @@ options:
   generateEmptyDirectories: true
   findCarthageFrameworks: false
   minimumXcodeGenVersion: 2.18.0
+  createIntermediateGroups: true
 configs:
   Debug (Development): debug
   Debug (Staging): release
@@ -50,6 +51,10 @@ targets:
         warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\
         \nfi\n"
       name: Run SwiftLint
+    configVariants:
+      - Debug (Development)
+      - Debug (Staging)
+      - Release (Production)
       
 schemes:
   $PROJECT_NAME$ - Production:
