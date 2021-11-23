@@ -44,6 +44,7 @@ targets:
     sources:
     - path: $PROJECT_PATH$/Source
       name: $PROJECT_NAME$
+      createIntermediateGroups: true
     postCompileScripts:
     - script: "if which swiftlint >/dev/null; then\n   swiftlint\nelse\n   echo \"\
         warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\
