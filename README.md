@@ -66,3 +66,13 @@ To summarize, the basic rules for scaling the architecture should be highlighted
 * Each coordinator works only with his own flow, the file size does not exceed 500 lines. Otherwise, we create a SubCoorinator according to the principle of the main coordinator's work with its subcoordinators.
 * Following the decomposition, we try not to overload services, presenters and controllers. Where can we break it down into separate entities and services.
 * For the privacy of individual classes, we work through protocols.
+
+
+## Installation
+* You do not have to clone the current repository just follow step-by-step the instruction: 
+1. brew install xcodegen
+2. Create new folder in your repository, where new project will be created
+3. Enter new Folder 
+4. Inside new Folder open terminal and run the comand: bash <(curl -s https://raw.githubusercontent.com/hetmanskiy/MVP-Coordinator/feature/Xcodegen/setup.sh)
+5. In the your new 
+

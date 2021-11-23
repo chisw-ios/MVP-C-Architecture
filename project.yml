@@ -49,3 +49,69 @@ targets:
         warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\
         \nfi\n"
       name: Run SwiftLint
+
+schemes:
+    $PROJECT_NAME$ - Production:
+    build:
+      targets:
+          $PROJECT_NAME$: all
+    run:
+      config: Release (Production)
+      commandLineArguments: "--option value"
+      environmentVariables:
+        RUN_ENV_VAR: VALUE
+    test:
+      config: Debug (Development)
+      commandLineArguments: "--option testValue"
+      gatherCoverageData: true
+      coverageTargets:
+        - $PROJECT_NAME$
+    analyze:
+      config: Debug (Development)
+    archive:
+      config: Release (Production)
+      customArchiveName: $PROJECT_NAME$
+      revealArchiveInOrganizer: false
+    $PROJECT_NAME$ - Development:
+    build:
+      targets:
+          $PROJECT_NAME$: all
+    run:
+      config: Debug (Development)
+      commandLineArguments: "--option value"
+      environmentVariables:
+        RUN_ENV_VAR: VALUE
+    test:
+      config: Debug (Development)
+      commandLineArguments: "--option testValue"
+      gatherCoverageData: true
+      coverageTargets:
+        - $PROJECT_NAME$
+    analyze:
+      config: Debug (Development)
+    archive:
+      config: Debug (Development)
+      customArchiveName: $PROJECT_NAME$
+      revealArchiveInOrganizer: false
+    $PROJECT_NAME$ - Staging:
+    build:
+      targets:
+          $PROJECT_NAME$: all
+    run:
+      config: Debug (Staging)
+      commandLineArguments: "--option value"
+      environmentVariables:
+        RUN_ENV_VAR: VALUE
+    test:
+      config: Debug (Development)
+      commandLineArguments: "--option testValue"
+      gatherCoverageData: true
+      coverageTargets:
+        - $PROJECT_NAME$
+    analyze:
+      config: Debug (Development)
+    archive:
+      config: Debug (Staging)
+      customArchiveName: $PROJECT_NAME$
+      revealArchiveInOrganizer: false
+      
