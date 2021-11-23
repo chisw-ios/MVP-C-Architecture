@@ -115,3 +115,7 @@ schemes:
       customArchiveName: $PROJECT_NAME$
       revealArchiveInOrganizer: false
       
+configFiles:
+    Debug (Development): $PROJECT_PATH$/SourceCoreLayer/Configurations/Development.xcconfig
+    Debug (Staging): $PROJECT_PATH$/Source/Source/CoreLayer/Configurations/Staging.xcconfig
+    Release (Production): $PROJECT_PATH$/Source/CoreLayer/Configurations/Production.xcconfig
