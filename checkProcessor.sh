@@ -4,10 +4,10 @@ if [ "${arch_name}" = "x86_64" ]; then
     if [ "$(sysctl -in sysctl.proc_translated)" = "1" ]; then
         echo "Running on Rosetta 2"
     else
-        echo "Running on native Intel"
+        pod install
     fi
 elif [ "${arch_name}" = "arm64" ]; then
-    echo "Running on ARM"
+    arch -x86_64 pod update  --repo-update
 else
     echo "Unknown architecture: ${arch_name}"
 fi
