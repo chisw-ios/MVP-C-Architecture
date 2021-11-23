@@ -18,5 +18,7 @@ cd ./$project_name
 
 xcodegen generate
 
-pod install
+#pod install
+
+arch -x86_64 pod install
 
