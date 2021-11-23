@@ -49,9 +49,9 @@ targets:
         warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\
         \nfi\n"
       name: Run SwiftLint
-
+      
 schemes:
-    $PROJECT_NAME$ - Production:
+  $PROJECT_NAME$ - Production:
     build:
       targets:
           $PROJECT_NAME$: all
@@ -72,7 +72,7 @@ schemes:
       config: Release (Production)
       customArchiveName: $PROJECT_NAME$
       revealArchiveInOrganizer: false
-    $PROJECT_NAME$ - Development:
+  $PROJECT_NAME$ - Development:
     build:
       targets:
           $PROJECT_NAME$: all
@@ -93,7 +93,7 @@ schemes:
       config: Debug (Development)
       customArchiveName: $PROJECT_NAME$
       revealArchiveInOrganizer: false
-    $PROJECT_NAME$ - Staging:
+  $PROJECT_NAME$ - Staging:
     build:
       targets:
           $PROJECT_NAME$: all
