@@ -78,7 +78,16 @@ To summarize, the basic rules for scaling the architecture should be highlighted
 Developed By
 ------------
 
-* Kosyi Vlad, Mykhailo Hetmanskyi, CHI Software
+* Kosyi Vlad, CHI Software
+
+## Contributors
+
+[//]: contributor-faces
+
+<a href="https://github.com/mykhailo-hetmanskyi"></a>
+
+[//]: contributor-faces
+
 
 License
 --------
