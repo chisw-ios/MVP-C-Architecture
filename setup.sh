@@ -3,7 +3,7 @@ project_name="PROJECT_NAME"
 echo 'Enter project name'
 read project_name
 
-git clone -b feature/Xcodegen https://github.com/chisw-ios/MVP-Coordinator.git ./$project_name
+git clone -b develop https://github.com/chisw-ios/MVP-Coordinator.git ./$project_name
 
 sed -i -e 's#\$PROJECT_NAME\$#'$project_name'#g' $project_name/project.yml
 
