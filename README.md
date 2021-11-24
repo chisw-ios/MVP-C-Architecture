@@ -1,5 +1,13 @@
 # MVP+Coordinator
 
+## Installation
+* You do not have to clone the current repository just follow step-by-step the instruction: 
+1. brew install xcodegen
+2. Open terminal inside the folder where you want to start new project('Directory with project name will be created automaticly)
+3. run the comand: ```bash <(curl -s https://raw.githubusercontent.com/chisw-ios/MVP-Coordinator/develop/setup.sh)```
+
+
+## Structure
 The skeleton of the project is based on the modular architecture MVP + C. It is based on a microservice idea, where each flow user will be a separate service. The principle of DependencyInjection is at the core of all dependencies. The directories in the project are divided into the following layers:
 * ApplicationLayer - with the most essential services 
 * BusinessLogicLayer - where we place models for networking and databases, as well as services for each flow.
@@ -67,10 +75,25 @@ To summarize, the basic rules for scaling the architecture should be highlighted
 * Following the decomposition, we try not to overload services, presenters and controllers. Where can we break it down into separate entities and services.
 * For the privacy of individual classes, we work through protocols.
 
+Developed By
+------------
 
-## Installation
-* You do not have to clone the current repository just follow step-by-step the instruction: 
-1. brew install xcodegen
-2. Open terminal inside the folder where you want to start new project('Directory with project name will be created automaticly)
-3. run the comand: ```bash <(curl -s https://raw.githubusercontent.com/hetmanskiy/MVP-Coordinator/feature/Xcodegen/setup.sh)```
+* Kosyi Vlad, Mykhailo Hetmanskyi, CHI Software
+
+License
+--------
+
+Copyright 2021 CHI Software.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
 
