@@ -84,7 +84,7 @@ Developed By
 
 [//]: contributor-faces
 
-<a href="https://github.com/mykhailo-hetmanskyi"></a>
+<a href="https://github.com/mykhailo-hetmanskyi"><img src="https://avatars.githubusercontent.com/u/59445752?v=4" title="mykhailo-hetmanskyi" width="50" height="50"></a>
 
 [//]: contributor-faces
 
