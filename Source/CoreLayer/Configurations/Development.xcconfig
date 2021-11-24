@@ -1,0 +1,13 @@
+//
+//  Development.xcconfig
+//
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+// Server URL
+API_URL = https:/$()/api.url/ // set your api url
+API_VERSION = /api/v1/
+
+// App Settings
+APP_NAME = app-name-dev
+APP_BUNDLE_ID = com.chisw.testApp // set your bundle name

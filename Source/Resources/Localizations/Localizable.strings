@@ -1,0 +1,9 @@
+/* 
+  Localisable.strings
+*/
+
+// Example: ViewController_name.element_name.text_type_name (title, subtitle)
+
+"LoginViewController.entranceButton.title" = "Вход";
+
+
