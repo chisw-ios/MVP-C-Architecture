@@ -5,6 +5,8 @@
 2. [Structure](#structure)
 3. [Contributors](#contributors)
 
+[Russian readme](https://github.com/chisw-ios/MVP-Coordinator/blob/develop/RU_README.md)
+
 [Video presentation record](https://chiswdevelopment.sharepoint.com/sites/iOSteam/_layouts/15/stream.aspx?id=%2Fsites%2FiOSteam%2FShared%20Documents%2FGeneral%2FRecordings%2FСобрание%20в%20канале%20%5FGeneral%5F%2D20220202%5F150412%2DЗапись%20собрания%2Emp4)
 
 ## Installation
