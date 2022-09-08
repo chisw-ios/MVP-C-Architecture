@@ -1,5 +1,11 @@
 # MVP+Coordinator
 
+
+1. [Установка](#установка)
+2. [Описание](#описание)
+
+[Video presentation record](https://chiswdevelopment.sharepoint.com/sites/iOSteam/_layouts/15/stream.aspx?id=%2Fsites%2FiOSteam%2FShared%20Documents%2FGeneral%2FRecordings%2FСобрание%20в%20канале%20%5FGeneral%5F%2D20220202%5F150412%2DЗапись%20собрания%2Emp4)
+
 ## Установка
 * Не нужно стягивать весь репозиторий, просто следуйте инструкции:
 1. В терминале запустите команду: brew install xcodegen
