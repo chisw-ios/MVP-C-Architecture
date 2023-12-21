@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>DefaultCompletionName</key>
+	<string>Assembler</string>
+	<key>Description</key>
+	<string>This generates a new assembler for flow. It consists of the coordinator, view controllers factory</string>
+	<key>Kind</key>
+	<string>Xcode.IDEKit.TextSubstitutionFileTemplateKind</string>
+	<key>Options</key>
+	<array>
+		<dict>
+			<key>Description</key>
+			<string>The name of the assembler to create</string>
+			<key>Identifier</key>
+			<string>assemblerName</string>
+			<key>Name</key>
+			<string>Assebler Name:</string>
+			<key>NotPersisted</key>
+			<true/>
+			<key>Required</key>
+			<true/>
+			<key>Type</key>
+			<string>text</string>
+		</dict>
+		<dict>
+			<key>Default</key>
+			<string>___VARIABLE_assemblerName:identifier___Coordinator</string>
+			<key>Description</key>
+			<string>The coordinator name</string>
+			<key>Identifier</key>
+			<string>coordinatorName</string>
+			<key>Name</key>
+			<string>Coordinator Name:</string>
+			<key>Required</key>
+			<true/>
+			<key>Type</key>
+			<string>static</string>
+		</dict>
+		<dict>
+			<key>Default</key>
+			<string>___VARIABLE_assemblerName:identifier___ViewControllersFactory</string>
+			<key>Description</key>
+			<string>The view controllers factory name</string>
+			<key>Identifier</key>
+			<string>viewControllersFactoryName</string>
+			<key>Name</key>
+			<string>ViewControllersFactory Name:</string>
+			<key>Required</key>
+			<true/>
+			<key>Type</key>
+			<string>static</string>
+		</dict>
+	</array>
+	<key>Platforms</key>
+	<array>
+		<string>com.apple.platform.iphoneos</string>
+	</array>
+	<key>SortOrder</key>
+	<string>7</string>
+	<key>Summary</key>
+	<string>This generates a new assembler for flow.</string>
+</dict>
+</plist>
